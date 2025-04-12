@@ -31,7 +31,7 @@ function Home() {
       setEmployeeData(finalData);
     } catch (error) {
       console.error("Error fetching employee data:", error.message);
-      alert("Error fetching data. Please try again later.");
+      alert("Failed to fetch data");
     }
   }
 
