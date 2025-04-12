@@ -29,9 +29,9 @@ function Home() {
       const finalData = await data.json();
       console.log(finalData);
       setEmployeeData(finalData);
-    }catch(error){
-      console.error(error);
-      alert(error);
+    } catch (error) {
+      console.error("Error fetching employee data:", error.message);
+      alert("Error fetching data. Please try again later.");
     }
   }
 
