@@ -31,6 +31,7 @@ function Home() {
       setEmployeeData(finalData);
     }catch(error){
       console.error(error);
+      alert(error);
     }
   }
 
