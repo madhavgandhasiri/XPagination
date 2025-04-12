@@ -22,12 +22,16 @@ function Home() {
   }
 
   async function fetchEmployeeData() {
-    const data = await fetch(
-      " https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
-    );
-    const finalData = await data.json();
-    console.log(finalData);
-    setEmployeeData(finalData);
+    try{
+      const data = await fetch(
+        " https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
+      );
+      const finalData = await data.json();
+      console.log(finalData);
+      setEmployeeData(finalData);
+    }catch(error){
+      console.error(error);
+    }
   }
 
   useEffect(() => {
@@ -60,9 +64,9 @@ function Home() {
         </table>
 
         <div className="pagination">
-          <button onClick={handlePrevious} disabled={currentPage === 1}>Previous</button>
+          <button onClick={handlePrevious} >Previous</button>
           <span>{currentPage}</span>
-          <button onClick={handleNext} disabled={currentPage === totalPages}>Next</button>
+          <button onClick={handleNext}>Next</button>
         </div>
       </div>
     </div>

@@ -58,6 +58,13 @@
   cursor: pointer;
 }
 
+.pagination span{
+  background-color: rgb(46, 128, 98);
+  padding: 0.5rem;
+  color: white;
+  border-radius: 2px;
+}
+
 .pagination button:hover{
   background-color: rgb(73, 163, 130);
 }
